@@ -1,0 +1,111 @@
+
+    <Window
+        xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Avalonia.PracticaInicial.iu.InsertWindow"
+        Title="Nueva reparacion"
+        Height="450" Width="450"
+        MinHeight="450" MinWidth="450"
+        MaxHeight="1000" MaxWidth="1000">
+        
+        <StackPanel Margin="5">
+            
+            <DockPanel Margin="5">
+                
+                <Label HorizontalAlignment="Center" FontSize="30">Nueva reparacion</Label>
+            </DockPanel>
+            
+            <ComboBox Margin="5" Name="CbTiposAparato" PlaceholderText="Aparato" Width="160" HorizontalAlignment="Right">
+                <ComboBoxItem>
+                    TV 
+                </ComboBoxItem>
+                    Radio 
+                <ComboBoxItem>
+                    Reproductor DVD
+                </ComboBoxItem>
+                    <ComboBoxItem>
+                        Adaptador TDT
+                </ComboBoxItem>
+            </ComboBox>
+            <DockPanel Name="PanelTV" HorizontalAlignment="Right" Margin="5" IsVisible="False">
+                <Label Name="LbPulgadas " Content="Pulgadas "></Label>
+                <TextBox Name="TbPulgadas" Width="40" HorizontalAlignment="Right"></TextBox>
+            </DockPanel>
+            
+            <DockPanel HorizontalAlignment="Right" Margin="5">
+                <Label Name="LBNumSerie " Content="Numero de serie "></Label>
+                <TextBox Name="TbNumeroSerie" Width="40" HorizontalAlignment="Right"></TextBox>
+            </DockPanel>
+            <DockPanel HorizontalAlignment="Right" Margin="5">
+                <Label Name="LbModelo " Content="Modelo "></Label>
+                <TextBox Name="TbModelo" Width="40" HorizontalAlignment="Right"></TextBox>
+            </DockPanel>
+            
+            <DockPanel HorizontalAlignment="Right" Margin="5">
+                <Label Name="LbPrecio " Content="Precio "></Label>
+                <TextBox Name="TbPrecio" Width="40" HorizontalAlignment="Right"></TextBox>
+            </DockPanel>
+            <DockPanel Name="PanelRadio" HorizontalAlignment="Right" Margin="5" IsVisible="False">
+                <Label Name="LbBanda " Content="Banda"></Label>
+                <!--<TextBox Name="TbBanda" Width="40" HorizontalAlignment="Right"></TextBox>-->
+                <ComboBox Name="CbBanda" Margin="5">
+                    <ComboBoxItem>AM</ComboBoxItem>
+                    <ComboBoxItem>FM</ComboBoxItem>
+                    <ComboBoxItem>Ambos</ComboBoxItem>
+                </ComboBox>
+            </DockPanel>
+            <DockPanel Name="PanelReproductorDVD" HorizontalAlignment="Right" Margin="5" IsVisible="False">
+                <Label Name="LbBlueRay" Content="BlueRay"></Label>
+                <!--<TextBox Name="TbBlueRay" Width="40" HorizontalAlignment="Right"></TextBox>-->
+                
+                <ComboBox Name="CbBlueRay" Margin="5">
+                    <ComboBoxItem>Si</ComboBoxItem>
+                    <ComboBoxItem>No</ComboBoxItem>
+                    
+                </ComboBox>
+            </DockPanel>
+            <DockPanel Name="PanelAdaptadorTDT" HorizontalAlignment="Right" Margin="5" IsVisible="False">
+                <Label Name="LbGrabar " Content="Grabar "></Label>
+                <!-- <TextBox Name="TbPuedeGrabar" Width="40" HorizontalAlignment="Right"></TextBox>-->
+                <ComboBox Name="CbGrabar" Margin="5">
+                    <ComboBoxItem>Si</ComboBoxItem>
+                    <ComboBoxItem>No</ComboBoxItem>
+                </ComboBox>
+                
+                <DockPanel HorizontalAlignment="Right" Margin="5" IsVisible="True">
+                    <Label Name="LbTiempoMaxGrabacion " Content="Tiempo maximo grabacion "></Label>
+                    <TextBox Name="TbTiempoMaxGrabacion" Width="40" HorizontalAlignment="Right"></TextBox>
+                </DockPanel>
+            </DockPanel>
+            
+            
+            <DockPanel HorizontalAlignment="Right" Margin="5">
+                <Label Name="LbHoras " Content="Numero de horas "></Label>
+                <TextBox Name="TbHoras" Width="40" HorizontalAlignment="Right"></TextBox>
+            </DockPanel>
+            <DockPanel HorizontalAlignment="Right" Margin="5">
+                <Label Name="LbPrecioPiezas" Content="Precio de las piezas "></Label>
+                <TextBox Name="TbPrecioPiezas" Width="40" HorizontalAlignment="Right"></TextBox>
+            </DockPanel>
+            <!--<DockPanel>
+                <Label Name="LbPrecioFinal " Content="Precio de las final: "></Label>
+                <TextBox Name="TbPrecioFinal"></TextBox>
+            </DockPanel>-->
+            
+            
+            <DockPanel  HorizontalAlignment="Center">
+                <Button Margin="5" Name="btInsertar" Content="Insertar" VerticalAlignment="Center" HorizontalAlignment="Right"></Button>
+                <Button Margin="5" Name="volverInicio" Content="Volver"  VerticalAlignment="Center" HorizontalAlignment="Left"></Button>
+            </DockPanel>
+            
+            
+        </StackPanel>
+        
+        
+    </Window>
+    
+    
+

@@ -1,0 +1,25 @@
+
+    <Window
+        xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Avalonia.PracticaInicial.iu.AboutWindow"
+        Title="Mensaje de ayuda"
+        Height="100" Width="600"
+        MinHeight="100" MinWidth="600"
+        MaxHeight="2000" MaxWidth="2000">
+        
+        <StackPanel Margin="5">
+            
+            <TextBlock Margin="5" Name="AboutText"></TextBlock>
+            <Button Margin="5" Name="salirAyuda" Content="Volver"></Button>
+            
+        </StackPanel>
+        
+        
+    </Window>
+    
+    
+

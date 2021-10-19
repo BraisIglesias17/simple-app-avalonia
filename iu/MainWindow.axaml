@@ -1,0 +1,82 @@
+        <Window xmlns="https://github.com/avaloniaui"
+                xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+                x:Class="Avalonia.PracticaInicial.iu.MainWindow"
+                Title="Reparaciones"
+                Background="#AEAEE9"
+                >
+            
+                <StackPanel Margin="7"
+                            HorizontalAlignment="Stretch"
+                            VerticalAlignment="Stretch">
+                        
+                        
+                        <Label Margin="5" Content="Bienvenido"></Label>
+                        <Menu
+                                VerticalAlignment="Top">
+                    
+                                <MenuItem Header="Archivo">
+                                        <MenuItem Header="Guardar" Name="OpGuardar" />
+                                        <MenuItem Header="Salir" Name="OpExit" />
+                                </MenuItem>
+                                <MenuItem Header="Editar">
+                                        <MenuItem Header="Insertar" Name="OpInsert" />
+                                </MenuItem>
+                                <MenuItem Header="Ayuda">
+                                        <MenuItem Header="Acerca de..." Name="OpAbout" />
+                                </MenuItem>
+                        </Menu>
+                
+                        <DockPanel
+                                Margin="5"
+                                VerticalAlignment="Stretch">
+                
+                                <Border    Margin="5"
+                                           BorderThickness="1"
+                                           CornerRadius="3"
+                                           BorderBrush="Black">
+                                          <Grid>
+                                                <DataGrid Name="DtReparaciones"
+                                                          Margin="5"
+                                                          AutoGenerateColumns="False"
+                                                          IsReadOnly="True"
+                                                          SelectionMode="Single"
+                                                          AlternatingRowBackground="LightBlue"
+                                                          >
+                                    
+                                    
+                                                        <DataGrid.Columns>
+                                                                <DataGridTextColumn Header="Numero de horas empleadas "  Binding="{Binding Horas}" />
+                                                                <DataGridTextColumn Header="Precio de las piezas"  Binding="{Binding PrecioPiezas}" />
+                                                                <DataGridTextColumn Header="Precio total " Binding="{Binding PrecioFinal}" />
+                                                        </DataGrid.Columns>
+                                                </DataGrid>
+                                          </Grid>
+                                        
+                                </Border>
+                    
+                                <!--<StackPanel DockPanel.Dock="Right"
+                                            Margin="5"
+                                            Orientation="Vertical"
+                                            VerticalAlignment="Stretch"
+                                            HorizontalAlignment="Right">
+                                    
+                                        <Button Name="BtInsert"
+                                                Margin="5"
+                                                Content="Insertar" />
+                                </StackPanel>-->
+                    
+                        </DockPanel>
+                
+                        <Label
+                                Name="LblDesc"
+                                Margin="5"
+                                VerticalAlignment="Bottom"
+                                HorizontalAlignment="Stretch" />
+                            
+                </StackPanel>
+                        
+               
+        </Window>
